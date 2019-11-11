@@ -8,7 +8,7 @@ import {
 import axios from 'axios'
 import { setMessage } from './message'
 const authBaseURL = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty'
-const API_KEY ='AIzaSyABaboUlZ2MMoh_z23gLMOeI1c-xgRk08Y' 
+const API_KEY ='minhakey-djieiowefjfjfjf' 
 
 export const userLogged = user => {
     return {
@@ -50,7 +50,7 @@ export const createUser = user => {
                         .catch(err => {
                             dispatch(setMessage({
                                 title: 'Erro',
-                                text: 'Ocorreu um erro inesperado ou criar usuario users!'
+                                text: 'Ocorreu um erro inesperado ou logar usuario users!'
                             }))
                         })
                         .then(() => {

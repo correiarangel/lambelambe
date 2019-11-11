@@ -14,7 +14,7 @@ export const addPost = post => {
         dispatch(creatingPost())
         axios({
             url :'uploadImage',
-            baseURL: 'https://us-central1-muraldev-2019.cloudfunctions.net',
+            baseURL: 'https://us-central1-meu.net',
             method:'post',
             data:{
                 image: post.image.base64

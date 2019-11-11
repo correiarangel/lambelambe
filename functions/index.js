@@ -4,8 +4,8 @@ const fs = require('fs')
 const uuid = require('uuid-v4')
 const { Storage } = require('@google-cloud/storage')
 const storage = new Storage({
-    projectId:'muradev',//altere parasua config
-    keyFilename: 'dev-firebase.json'//altere parasua config
+    projectId:'muraldev-2019',//altere parasua config
+    keyFilename: 'muraldev-firebase.json'//altere parasua config
 
 })
 
@@ -15,7 +15,7 @@ exports.uploadImage = functions.https.onRequest((request, response) => {
             fs.writeFileSync('/tmp/imageToSave.jpg', 
                 request.body.image, 'base64')
            
-            const bucket = storage.bucket('muradev.appspot.com')//altere parasua config
+            const bucket = storage.bucket('muraldev-2019.appspot.com')//altere parasua config
             const id = uuid()
             bucket.upload('/tmp/imageToSave.jpg', {
                 uploadType: 'media',
